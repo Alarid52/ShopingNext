@@ -1,9 +1,9 @@
 import { Category } from './Category';
-import { InfoIndex } from './InfoIndex'
+import { InfoIndex } from './InfoIndex';
 
 export const GridCategories = ({items}) => {
     
-    const categoriesGrid = ['men', 'women', 'jewelery', 'electronics']
+    const categoriesGrid = ['men', 'women', 'jewelery', 'electronics'];
 
     const menItems = items.filter((item)=> item.category === "men's clothing");
     const womenItems = items.filter((item)=> item.category === "women's clothing");

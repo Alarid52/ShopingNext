@@ -1,4 +1,4 @@
-import { ButtonCart } from './ButtonCart'
+import { ButtonCart } from './ButtonCart';
 
 export const NavBar = () => {
     return (
