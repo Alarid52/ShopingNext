@@ -6,6 +6,7 @@ import { getItems } from '@/helpers/getItems';
 
 export default function Home() {
   const [items , setItems] = useState([]);
+  const [itemsCartMenu, setItemsCartMenu] = useState(false);
 
   const itemsApi = async () => {
       const response = await getItems();
@@ -16,6 +17,8 @@ export default function Home() {
       itemsApi();
   },[])
 
+
+
   return (
     <>
       <Head>
@@ -25,7 +28,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar/>
+      <NavBar menu={itemsCartMenu}/>
       <GridCategories items={items}/>
     </>
   )

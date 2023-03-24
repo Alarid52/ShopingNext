@@ -179,7 +179,6 @@
   right: 32px;
   overflow-y: scroll;
   border-radius: 5px;
-  visibility: hidden;
   background-color: white;
   border: 1px solid rgb(153, 153, 153);
 }
