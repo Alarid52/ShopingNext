@@ -1,8 +1,8 @@
 
-export const ButtonCart = () => {
+export const ButtonCart = ({view}) => {
     return (
         <>
-            <button type="button" id="btn-cart">
+            <button type="button" id="btn-cart" onClick={view}>
                 <svg className="btni-cart" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path id="path" fillRule="evenodd" clipRule="evenodd" d="M5 4H19C19.5523 4 20 4.44771 20 5V19C20 19.5523 19.5523 20 19 20H5C4.44772

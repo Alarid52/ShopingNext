@@ -1,7 +1,7 @@
 import { Category } from './Category';
 import { InfoIndex } from './InfoIndex';
 
-export const GridCategories = ({items}) => {
+export const GridCategories = ({items, insertItem}) => {
     
     const categoriesGrid = ['men', 'women', 'jewelery', 'electronics'];
 
@@ -17,16 +17,16 @@ export const GridCategories = ({items}) => {
                 let cat;   
                 switch (category) {
                     case 'men':
-                        cat = <Category key={category} category={category} itemsCategory={menItems}/>
+                        cat = <Category key={category} category={category} itemsCategory={menItems} insertItem={insertItem}/>
                         break;
                     case 'women':
-                        cat = <Category key={category} category={category} itemsCategory={womenItems}/>
+                        cat = <Category key={category} category={category} itemsCategory={womenItems} insertItem={insertItem}/>
                         break;
                     case 'jewelery':
-                        cat = <Category key={category} category={category} itemsCategory={jewelItems}/>
+                        cat = <Category key={category} category={category} itemsCategory={jewelItems} insertItem={insertItem}/>
                         break;
                     case 'electronics':
-                        cat = <Category key={category} category={category} itemsCategory={elecItems}/>
+                        cat = <Category key={category} category={category} itemsCategory={elecItems} insertItem={insertItem}/>
                         break;
                     default:
                         break;

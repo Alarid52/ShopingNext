@@ -1,6 +1,7 @@
 import { ButtonCart } from './ButtonCart';
+import { CartMenu } from './CartMenu';
 
-export const NavBar = ({menu}) => {
+export const NavBar = ({menu, view, itemMenu}) => {
     return (
         <nav className="nav-bar">
             <div className="logo">
@@ -8,12 +9,8 @@ export const NavBar = ({menu}) => {
                 <img src="../img/strore-logo.png" alt="store-logo" id="fake-nav" />
             </div>
             <div className="cart">
-                {(menu && (<div className="menu-cart">
-                    <div className="total-price">
-                        <h4>Total Price: $0</h4>
-                    </div>
-                </div>))}
-                <ButtonCart />
+                {(menu && (<CartMenu items = {itemMenu}/>))}
+                <ButtonCart view={view}/>
             </div>
         </nav>
     )
