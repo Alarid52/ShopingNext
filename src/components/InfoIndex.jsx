@@ -1,4 +1,3 @@
-
 export const InfoIndex = () => {
     return (
         <div className="index items">

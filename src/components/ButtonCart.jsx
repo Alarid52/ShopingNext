@@ -1,5 +1,4 @@
-
-export const ButtonCart = ({view}) => {
+export const ButtonCart = ({ view }) => {
     return (
         <>
             <button type="button" id="btn-cart" onClick={view}>

@@ -1,6 +1,4 @@
-import React from 'react'
-
-export const MenuCard = ({item}) => {
+export const MenuCard = ({item, buttons}) => {
     return (
         <div className="row">
             <div className="img-row">
@@ -12,12 +10,12 @@ export const MenuCard = ({item}) => {
                 <h4>${(item.price * item.quantity).toFixed(2)}</h4>
             </div>
             <div className="cuantity">
-                <button type="button" className="btn-cuantity-min">-</button>
+                 <button type="button" className="btn-cuantity-min" onClick={()=> buttons.min(item)}>-</button>
                 <h5>{item.quantity}</h5>
-                <button type="button" className="btn-cuantity-max">+</button>
+                <button type="button" className="btn-cuantity-max" onClick={()=> buttons.add(item)}>+</button>
             </div>
             <div className="delete-item">
-                <button type="button" className="btn-delete">X</button>
+                <button type="button" className="btn-delete"  onClick={()=> buttons.del(item)}>X</button>
             </div>
         </div>
     )
