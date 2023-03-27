@@ -9,6 +9,15 @@ export default function Home() {
   const [itemsCartMenu, setItemsCartMenu] = useState([]);
   const [viewMenu, setViewMenu] = useState(false);
 
+  const itemsApi = async () => {
+    const response = await getItems();
+    setItems(response);
+  }
+
+  useEffect(() => {
+    itemsApi();
+  }, [])
+
   const insertItem = (product) => {
     if (!itemsCartMenu.some((item) => item.id === product.id)) {
       setItemsCartMenu([...itemsCartMenu, { ...product, quantity: 1 }]);
@@ -26,15 +35,6 @@ export default function Home() {
     del: (product) => setItemsCartMenu(itemsCartMenu.filter((item) => item.id !== product.id)),
     delAll: () => setItemsCartMenu([])
   }
-
-  const itemsApi = async () => {
-    let response = await getItems();
-    setItems(response);
-  }
-
-  useEffect(() => {
-    itemsApi();
-  }, [])
 
   return (
     <>

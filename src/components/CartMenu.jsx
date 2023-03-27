@@ -2,7 +2,7 @@ import { MenuCard } from './MenuCard';
 
 export const CartMenu = ({ items, buttons }) => {
 
-    let totalPrice = (items.length === 0) ? 0 : items.map((item) => item.quantity * item.price).reduce((prev, next) => prev + next);
+    const totalPrice = (items.length === 0) ? 0 : items.map((item) => item.quantity * item.price).reduce((prev, next) => prev + next);
 
     return (
         <div className="menu-cart">

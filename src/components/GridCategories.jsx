@@ -14,24 +14,18 @@ export const GridCategories = ({ items, insertItem }) => {
         <section className="container-items">
             <InfoIndex />
             {categoriesGrid.map((category) => {
-                let cat;
                 switch (category) {
                     case 'men':
-                        cat = <Category key={category} category={category} itemsCategory={menItems} insertItem={insertItem} />
-                        break;
+                        return <Category key={category} category={category} itemsCategory={menItems} insertItem={insertItem} />                       
                     case 'women':
-                        cat = <Category key={category} category={category} itemsCategory={womenItems} insertItem={insertItem} />
-                        break;
+                        return <Category key={category} category={category} itemsCategory={womenItems} insertItem={insertItem} />                        
                     case 'jewelery':
-                        cat = <Category key={category} category={category} itemsCategory={jewelItems} insertItem={insertItem} />
-                        break;
+                        return <Category key={category} category={category} itemsCategory={jewelItems} insertItem={insertItem} />        
                     case 'electronics':
-                        cat = <Category key={category} category={category} itemsCategory={elecItems} insertItem={insertItem} />
-                        break;
+                        return <Category key={category} category={category} itemsCategory={elecItems} insertItem={insertItem} />  
                     default:
                         break;
                 }
-                return cat;
             })}
         </section>
     )
