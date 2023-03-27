@@ -2,8 +2,7 @@ import Head from 'next/head';
 import { NavBar } from '@/components/NavBar';
 import { GridCategories } from '@/components/GridCategories';
 import { useEffect, useState } from 'react';
-import { getItems } from './api/getItems';
-
+import { getItems } from '@/helpers/getItems';
 
 export default function Home() {
   const [items, setItems] = useState([]);
